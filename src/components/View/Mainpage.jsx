@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import HeroImage from "../Global/heroImage/HeroImage";
-import Topbar from "../Global/Topbar/Topbar";
+import Topbar from "../Global/topbar/Topbar";
 import SliderComponent from "../Global/View/SliderComponent";
 import Mainpart from "../Global/Mainpart/Mainpart";
 import AboutCompany from "../Global/aboutCompany/AboutCompany";
