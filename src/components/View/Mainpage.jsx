@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import HeroImage from "../Global/heroImage/HeroImage";
 import Topbar from "../Global/topbar/Topbar";
 import SliderComponent from "../Global/View/SliderComponent";
