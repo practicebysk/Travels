@@ -1,0 +1,65 @@
+@import "../../../index.scss";
+
+.footer {
+    background-color: #151d2b;
+    color: #ccc;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    .footer-title {
+        color: white;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 10px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    ul li {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 10px;
+    }
+
+    ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+    }
+
+    ul li a:hover {
+        color: #fff;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    input {
+        background-color: #1f2937;
+        color: $color-white;
+        border-radius: 0;
+    }
+    input:focus {
+        background-color: #1f2937;
+        color: $color-white;
+        outline: none !important;
+    }
+    input::placeholder {
+        background-color: #1f2937;
+        color: $color-white;
+    }
+
+    svg {
+        color: red;
+        margin-right: 6px;
+        font-size: 18px;
+    }
+}

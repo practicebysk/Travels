@@ -1,0 +1,181 @@
+@import "../../../index.scss";
+
+.bg-image-hero {
+    background-image: url("/assets/images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    .po-top-end-pos {
+        top: 1%;
+        right: 0px;
+        font-weight: 500;
+        color: white;
+        span {
+            cursor: pointer;
+        }
+    }
+    .icon {
+        padding: 1px;
+    }
+}
+
+.top-navabr-fixed {
+    width: 105%;
+    padding: 20px;
+    padding-bottom: 0px;
+    transition: all 0.3s ease-in-out;
+    background-color: $color-navi-blue;
+    color: white;
+    z-index: 1;
+    span {
+        cursor: pointer;
+    }
+}
+
+.top-nav-dark {
+    background-color: $color-dark-blue;
+    z-index: 1;
+}
+
+.top-nav-dropdown {
+    background-color: $color-dark-blue;
+}
+
+.po-top-end-pos-h1 {
+    top: 38%;
+    left: 12%;
+    right: 0px;
+    h1 {
+        font-size: 60px;
+    }
+    @media (max-width: 1400px) {
+        p {
+            color: white !important;
+        }
+    }
+    @media (max-width: 750px) {
+        h1 {
+            font-size: 3.25rem !important;
+        }
+
+        p {
+            display: none;
+        }
+    }
+    @media (max-width: 500px) {
+        top: 20%;
+        left: 0%;
+        // left: 5%;
+        h1 {
+            font-size: 2.25rem !important;
+        }
+
+        p {
+            display: none;
+        }
+    }
+    @media (max-width: 400px) {
+        top: 30%;
+        left: 10%;
+
+        h1 {
+            font-size: 2.25rem !important;
+        }
+    }
+}
+
+.curs-font {
+    font-family: "Playwrite CU", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.hero-p-tag-text {
+    font-size: 1.25rem !important;
+    color: $color-grey;
+}
+
+.search-bar {
+    color: white;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(170, 170, 170, 0.2);
+    label {
+        margin-bottom: 10px;
+    }
+
+    > div {
+        position: relative;
+        .icon {
+            position: absolute;
+            left: 20px;
+            top: 71%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+        input {
+            color: white;
+            background: transparent;
+            border: 1px solid rgb(31 41 55);
+            border-radius: 3px;
+            padding: 5px;
+            padding-left: 35px;
+            @media (max-width: 1343px) {
+                width: 100%;
+            }
+        }
+
+        input::placeholder {
+            color: $color-grey;
+        }
+
+        input[type="date"] {
+            width: 130%;
+            @media (max-width: 1343px) {
+                width: 100%;
+            }
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            left: 20px;
+            top: 71%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: white !important;
+            background-color: white;
+        }
+
+        select {
+            color: white;
+            background: transparent;
+            border: 1px solid grey;
+            border-radius: 3px;
+            padding: 5px;
+            padding-left: 35px;
+            width: 130%;
+            appearance: none;
+            @media (max-width: 1343px) {
+                width: 100%;
+            }
+        }
+        option {
+            background-color: $color-dark-blue;
+        }
+    }
+
+    button {
+        margin-top: 36px;
+        padding: 7px 40%;
+    }
+
+    @media (max-width: 703px) {
+        width: 90%;
+    }
+}

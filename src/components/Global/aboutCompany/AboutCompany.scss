@@ -1,0 +1,139 @@
+@import "../../../index.scss";
+
+.about-com {
+    overflow: hidden;
+
+    .main-Image {
+        width: 100%; // Ensures it scales down responsively
+        max-width: 427px; // Limits it for larger screens
+        img {
+            border-radius: 20px;
+        }
+
+        .info-card {
+            position: absolute;
+            padding: 15px 20px;
+            background-color: $color-dark-blue;
+            border-radius: 10px;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(170, 170, 170, 0.2) !important;
+
+            p {
+                margin: 0;
+                font-weight: 600;
+                font-size: 16px;
+                color: $color-grey;
+            }
+
+            &.travel-packages {
+                top: 50px;
+                right: -30px;
+
+                @media (max-width: 768px) {
+                    top: 30px;
+                    right: -10px;
+                }
+            }
+
+            &.visitor {
+                bottom: 41px;
+                left: -30px;
+                width: 200px;
+
+                @media (max-width: 768px) {
+                    bottom: 20px;
+                    left: -10px;
+                }
+            }
+
+            .Icon {
+                background-color: rgba(120, 10, 0, 0.1) !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                border-radius: 10px;
+                color: red;
+                font-size: 24px;
+
+                @media (max-width: 768px) {
+                    width: 45px;
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                margin-top: 5px;
+                font-weight: 400;
+            }
+
+            span {
+                display: block;
+                font-size: 20px;
+                font-weight: 450;
+                margin-bottom: 5px;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .about-com-sec {
+        padding-top: 80px;
+        padding-left: 69px;
+
+        @media (max-width: 768px) {
+            padding-left: 10px;
+        }
+
+        > div:first-child {
+            line-height: 0;
+        }
+
+        p {
+            color: $color-grey;
+        }
+
+        button {
+            padding: 10px 20px;
+            padding-bottom: 0px;
+            vertical-align: middle;
+
+            svg {
+                font-size: 10px;
+                margin-top: 8px;
+                color: white;
+                margin-left: 10px;
+            }
+        }
+
+        .back-Image {
+            margin-left: -109px;
+            margin-top: -85px;
+            width: 40%;
+
+            @media (max-width: 500px) {
+                width: 100%;
+                margin-left: -50px;
+                margin-top: -120px;
+            }
+            @media (max-width: 700px) and (min-width: 500px) {
+                width: 60%;
+                margin-left: -20px;
+                margin-top: -120px;
+            }
+            @media (max-width: 992px) and (min-width: 700px) {
+                width: 25%;
+                margin-left: -20px;
+                margin-top: -120px;
+            }
+            @media (max-width: 1393px) and (min-width: 1204px) {
+                width: 25%;
+                margin-left: -20px;
+                margin-top: -120px;
+            }
+        }
+    }
+}

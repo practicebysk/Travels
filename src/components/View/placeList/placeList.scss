@@ -1,0 +1,344 @@
+@import "../../../index.scss";
+
+.main-80-width {
+    width: 80%;
+    .main-image-div {
+        .card-bg-image {
+            background-color: $color-dark-blue !important;
+            border: 1px solid rgb(31 41 55);
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 12px;
+            color: white !important;
+
+            .image-container {
+                position: relative;
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .card-img-top {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+                transform: scale(1.3);
+            }
+
+            &:hover .card-img-top {
+                transform: scale(1);
+            }
+
+            .like-button-overlay {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                align-items: center;
+                border-radius: 5px;
+                background-color: $color-dark-blue !important;
+                padding: 0px 6px;
+                border-radius: 50%;
+                font-size: 25px;
+                cursor: pointer;
+                &:hover {
+                    color: red;
+                }
+            }
+
+            .discount-badge {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: red;
+                color: white;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 8px;
+            }
+
+            .card-body {
+                svg {
+                    vertical-align: text-top !important;
+                    color: red;
+                }
+                .card-title {
+                    font-weight: 400;
+                    font-size: 17px;
+                    color: $color-grey;
+                }
+                .card-text {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                .star {
+                    margin-top: -1px;
+                    margin-left: 10px;
+                    .value {
+                        margin-top: 3px;
+                        margin-left: 5px;
+                        font-size: 14px;
+                    }
+                }
+                .card-bottom {
+                    svg {
+                        vertical-align: middle !important;
+                        color: $color-grey;
+                    }
+                }
+            }
+        }
+
+        .image-container {
+            position: relative;
+            height: 280px;
+
+            img {
+                transition: opacity 0.3s ease;
+            }
+
+            .camera-icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                color: white;
+                font-size: 20px;
+                background-color: red;
+                border-radius: 50%;
+                padding: 4px 11px 6px 10px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover img {
+                opacity: 0.5;
+            }
+
+            &:hover .camera-icon {
+                opacity: 1;
+            }
+        }
+
+        .main-location {
+            span {
+                font-size: 20px;
+            }
+        }
+        .main-location-part {
+            span {
+                color: $color-grey;
+                font-size: 25px;
+                margin-right: 10px;
+                margin-top: 5px;
+                color: red;
+            }
+        }
+        .image-details-acc-summary {
+            color: red;
+        }
+
+        .main-accordion {
+            background-color: $color-dark-blue;
+            border: 1px solid #1e293b;
+            margin-bottom: 10px;
+            .child-min {
+                background-color: rgba($color: #1e293b, $alpha: 1);
+            }
+            .child-summary {
+                color: #ffffff80;
+                font-size: 15px;
+            }
+        }
+
+        .main-form-div {
+            input {
+                margin: 10px 0px;
+                background-color: transparent;
+                padding: 10px 20px;
+                border: 1px solid rgb(31 41 55);
+                color: $color-grey;
+            }
+            textarea {
+                background-color: transparent;
+                border: 1px solid rgb(31 41 55);
+                padding: 10px 20px;
+                color: $color-grey;
+            }
+        }
+    }
+    .tour-search-main {
+        border: 1px solid rgb(31 41 55);
+        padding: 10px 20px;
+
+        .icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        input {
+            color: white;
+            background: transparent;
+            border: 1px solid rgb(31 41 55);
+            border-radius: 3px;
+            padding: 5px;
+            padding-left: 35px;
+            width: 100%;
+        }
+
+        input::placeholder {
+            color: $color-grey;
+        }
+
+        input[type="date"] {
+            width: 100%;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            left: 17px;
+            top: 76%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: white !important;
+            background-color: white;
+        }
+        .map-main {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+    .tour-search-main-sidebar {
+        border: 1px solid rgb(31 41 55);
+        padding: 20px;
+
+        h3 {
+            font-size: 1.1em;
+            font-weight: 400;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .price-slider {
+            margin-bottom: 20px;
+
+            .slider-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 80%;
+                height: 5px;
+                background: #ddd;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 0 10px;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background: #ff4500;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: #ff4500;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .price-output {
+                text-align: center;
+                margin-top: 5px;
+                font-size: 1em;
+            }
+        }
+
+        .reviews-section {
+            .rating-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+
+                .custom-checkbox {
+                    margin-right: 10px;
+                    width: 15px;
+                    height: 15px;
+                    accent-color: red;
+                    cursor: pointer;
+                }
+
+                .stars {
+                    margin-top: -5px;
+                }
+            }
+        }
+
+        .booking-activity {
+            ul {
+                padding: 0;
+                color: $color-white;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+                input {
+                    margin-right: 10px;
+                    width: 15px;
+                    height: 15px;
+                    accent-color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .map-main {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 754px) {
+        width: 100%;
+    }
+}

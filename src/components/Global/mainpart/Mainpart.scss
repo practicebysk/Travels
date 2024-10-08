@@ -1,0 +1,97 @@
+@import "../../../index.scss";
+
+.card-bg {
+    background-color: $color-dark-blue !important;
+    box-shadow: 0 4px 8px rgba(170, 170, 170, 0.2);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 12px;
+    color: white !important;
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.3);
+    }
+
+    &:hover .card-img-top {
+        transform: scale(1);
+    }
+
+    .like-button-overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $color-dark-blue !important;
+        padding: 0px 6px;
+        border-radius: 50%;
+        font-size: 25px;
+        cursor: pointer;
+        &:hover {
+            color: red;
+        }
+    }
+
+    .discount-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    .card-body {
+        svg {
+            vertical-align: text-top !important;
+            color: red;
+        }
+        .card-title {
+            font-weight: 400;
+            font-size: 17px;
+            color: $color-grey;
+        }
+        .card-text {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .star {
+            margin-top: -1px;
+            margin-left: 10px;
+            .value {
+                margin-top: 3px;
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+        .card-bottom {
+            svg {
+                vertical-align: middle !important;
+                color: $color-grey;
+            }
+        }
+    }
+}
+
+.hover-text-red {
+    font-weight: 400;
+    &:hover {
+        color: red;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,26 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(214, 17, 10, 0.1) !important;
+    color: red;
+    border: none;
+    border-radius: 10%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        color: white;
+        background-color: red !important;
+    }
+}
+
+.visible-button {
+    display: block !important;
+}

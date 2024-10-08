@@ -1,0 +1,16 @@
+@import "../../../index.scss";
+
+.bg-col-topbar {
+    background-color: $color-dark-blue;
+    color: $color-white;
+    .top-bar-text-size {
+        font-size: 0.855rem;
+        font-weight: 500;
+    }
+}
+
+.topBar-show-hide {
+    @media (max-width: 990px) {
+        display: none;
+    }
+}
