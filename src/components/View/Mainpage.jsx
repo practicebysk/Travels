@@ -1,7 +1,7 @@
 import HeroImage from "../Global/heroImage/HeroImage";
 import Topbar from "../Global/topbar/Topbar";
 import SliderComponent from "../Global/View/SliderComponent";
-import Mainpart from "../Global/Mainpart/Mainpart";
+import Mainpart from "../Global/mainpart/Mainpart";
 import AboutCompany from "../Global/aboutCompany/AboutCompany";
 
 function Mainpage() {

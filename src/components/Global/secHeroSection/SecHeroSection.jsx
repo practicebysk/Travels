@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./secHeroSection.scss";
+import "./SecHeroSection.scss";
 
 import { Link } from "react-router-dom";
 
