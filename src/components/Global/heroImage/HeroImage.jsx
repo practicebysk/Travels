@@ -93,9 +93,7 @@ function HeroImage() {
           <div
             className={`col-6 
             text-white
-            fw-bold
-            ${isScrolled ? "justify-content-start position-absolute p-3" : ""}
-            `}
+            fw-bold`}
             style={{ cursor: "pointer" }}
             onClick={() => scrollToSec("Hero", 0)}
           >
