@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./placeList.scss";
-// import Lightbox from "react-image-lightbox";
+import Lightbox from "react-image-lightbox";
 // img
 import slider3 from "/assets/slider3.jpg";
 import slider2 from "/assets/slider2.jpg";
