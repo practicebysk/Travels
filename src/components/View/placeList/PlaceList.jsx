@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./placeList.scss";
-// import Lightbox from "react-image-lightbox";
 // img
 import slider3 from "/assets/slider3.jpg";
 import slider2 from "/assets/slider2.jpg";
@@ -27,6 +26,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useNavigate } from "react-router-dom";
 import { getPlace } from "../../service/API";
 import { toast } from "react-toastify";
+import Lightbox from "yet-another-react-lightbox";
 
 function PlaceList({ imageData, imageAllData }) {
   const filterList = {
@@ -79,19 +79,21 @@ function PlaceList({ imageData, imageAllData }) {
     adult: "",
     children: "",
   });
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [sigleData?.img, slider3, slider1, slider2];
 
-  const handleOpen = (index) => {
-    setPhotoIndex(index);
-    setIsOpen(true);
-  };
-  const nextImage = () => {
-    setPhotoIndex((photoIndex + 1) % images.length);
-  };
-  const prevImage = () => {
-    setPhotoIndex((photoIndex + images.length - 1) % images.length);
-  };
+  // const handleOpen = (index) => {
+  //   setPhotoIndex(index);
+  //   setIsOpen(true);
+  // };
+  // const nextImage = () => {
+  //   setPhotoIndex((photoIndex + 1) % images.length);
+  // };
+  // const prevImage = () => {
+  //   setPhotoIndex((photoIndex + images.length - 1) % images.length);
+  // };
 
   // accroding
   const handleChange = (panel) => (event, isExpanded) => {
@@ -412,7 +414,10 @@ function PlaceList({ imageData, imageAllData }) {
                           />
                           <span className="camera-icon">
                             <IoCameraOutline
-                              onClick={() => handleOpen(index)}
+                              onClick={() => {
+                                setCurrentIndex(index);
+                                setOpen(true);
+                              }}
                             />
                           </span>
                         </div>
@@ -845,20 +850,17 @@ function PlaceList({ imageData, imageAllData }) {
               </div>
             </div>
           </div>
-          {isOpen && (
-            <Lightbox
-              mainSrc={images[photoIndex]}
-              nextSrc={images[(photoIndex + 1) % images.length]}
-              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-              onCloseRequest={() => setIsOpen(false)}
-              onMovePrevRequest={prevImage}
-              onMoveNextRequest={nextImage}
-              zoomInLabel="Zoom In"
-              zoomOutLabel="Zoom Out"
-            />
-          )}
         </>
       )}
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={images.map((image) => ({
+          src: image,
+        }))}
+        index={currentIndex}
+        onSlideChange={(index) => setCurrentIndex(index)}
+      />
     </div>
   );
 }
