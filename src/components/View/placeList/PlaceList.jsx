@@ -65,8 +65,8 @@ function PlaceList({ imageData, imageAllData }) {
   const navigate = useNavigate();
   const [sigleData, getsigleData] = useState();
   const [allData, getAllData] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [expanded, setExpanded] = useState("panel1");
   const [placeFilterList, setPlaceFilterList] = useState(filterList);
   const [formData, setFormData] = useState({
@@ -79,21 +79,8 @@ function PlaceList({ imageData, imageAllData }) {
     adult: "",
     children: "",
   });
-  const [open, setOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [sigleData?.img, slider3, slider1, slider2];
-
-  // const handleOpen = (index) => {
-  //   setPhotoIndex(index);
-  //   setIsOpen(true);
-  // };
-  // const nextImage = () => {
-  //   setPhotoIndex((photoIndex + 1) % images.length);
-  // };
-  // const prevImage = () => {
-  //   setPhotoIndex((photoIndex + images.length - 1) % images.length);
-  // };
 
   // accroding
   const handleChange = (panel) => (event, isExpanded) => {
